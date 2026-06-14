@@ -19,7 +19,7 @@ const router = Router();
 
 router.use(authenticate);
 
-// router.post('/', validate({ body: createBookingSchema }), createBooking);
+router.post('/', validate({ body: createBookingSchema }), createBooking);
 router.get('/', validate({ query: listBookingsQuerySchema }), listBookings);
 router.get('/:id', validate({ params: idParamSchema }), getBooking);
 router.patch(
