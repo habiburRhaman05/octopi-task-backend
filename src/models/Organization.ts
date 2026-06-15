@@ -57,7 +57,7 @@ const organizationSchema = new Schema<OrganizationDocument>(
       required: true,
       validate: {
         validator: (tz: string): boolean => isValidTimezone(tz),
-        message: (props): string => `\"${props.value}\" is not a valid IANA timezone`,
+        message: (props:any): string => `\"${props.value}\" is not a valid IANA timezone`,
       },
     },
     workingHours: { type: workingHoursSchema, required: true },

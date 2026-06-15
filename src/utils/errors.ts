@@ -47,3 +47,23 @@ export class ConflictError extends AppError {
     super(message, 409, details);
   }
 }
+
+
+
+export class TenantIsolationError extends AppError {
+  constructor(message = 'Resource not found', details?: unknown) {
+    super(message, 404, details);
+  }
+}
+
+export class BookingConflictError extends ConflictError {
+  constructor(message = 'Booking conflicts with an existing booking', details?: unknown) {
+    super(message, details);
+  }
+}
+
+export class TimezoneError extends AppError {
+  constructor(message = 'Invalid timezone', details?: unknown) {
+    super(message, 400, details);
+  }
+}

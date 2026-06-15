@@ -6,7 +6,16 @@
     "build": "tsc",
     "start": "node dist/server.js",
     "dev": "nodemon --watch src --ext ts --exec ts-node src/server.ts",
+    "typecheck": "tsc --noEmit"
   },
+  "keywords": [
+    "booking",
+    "multi-tenant",
+    "availability",
+    "typescript",
+    "express",
+    "mongoose"
+  ],
   "author": "",
   "license": "MIT",
   "dependencies": {
