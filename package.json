@@ -26,6 +26,8 @@
     "jsonwebtoken": "^9.0.3",
     "luxon": "^3.7.2",
     "mongoose": "^9.7.0",
+    "swagger-jsdoc": "^6.3.0",
+    "swagger-ui-express": "^5.0.1",
     "zod": "^4.4.3"
   },
   "devDependencies": {
@@ -36,6 +38,8 @@
     "@types/jsonwebtoken": "^9.0.10",
     "@types/luxon": "^3.7.1",
     "@types/node": "^25.9.3",
+    "@types/swagger-jsdoc": "^6.0.4",
+    "@types/swagger-ui-express": "^4.1.8",
     "@typescript-eslint/eslint-plugin": "^8.61.0",
     "@typescript-eslint/parser": "^8.61.0",
     "eslint": "^10.5.0",

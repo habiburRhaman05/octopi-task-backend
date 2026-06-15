@@ -7,6 +7,9 @@ import userRoutes from './routes/userRoutes';
 import bookingRoutes from './routes/bookingRoutes';
 import resourceRoutes from './routes/resourceRoutes';
 import availabilityRoutes from './routes/availabilityRoutes';
+import swaggerUi from 'swagger-ui-express';
+import { swaggerSpec } from './config/swagger';
+
 
 export function createApp(): Application {
   const app = express();
@@ -25,7 +28,7 @@ export function createApp(): Application {
   app.use('/resources', resourceRoutes);
   app.use('/bookings', bookingRoutes);
   app.use('/availability', availabilityRoutes);
-
+app.use('/api-docs', swaggerUi.serve, swaggerUi.setup(swaggerSpec));
   app.use(notFoundHandler);
   app.use(errorHandler);
 
