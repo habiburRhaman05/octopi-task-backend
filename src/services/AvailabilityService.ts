@@ -41,9 +41,11 @@ export class AvailabilityService {
 
     const rangeStartLocal = DateTime.fromISO(query.startDate, { zone: org.timezone })
       .startOf('day');
-    const rangeEndLocal = DateTime.fromISO(query.endDate, { zone: org.timezone })
+      
+      const rangeEndLocal = DateTime.fromISO(query.endDate, { zone: org.timezone })
       .startOf('day');
-
+      
+      console.log(rangeStartLocal, rangeEndLocal);
     if (!rangeStartLocal.isValid || !rangeEndLocal.isValid) {
       throw new ValidationError('Invalid startDate or endDate');
     }

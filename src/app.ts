@@ -5,6 +5,8 @@ import authRoutes from './routes/authRoutes';
 import organizationRoutes from './routes/organizationRoutes';
 import userRoutes from './routes/userRoutes';
 import bookingRoutes from './routes/bookingRoutes';
+import resourceRoutes from './routes/resourceRoutes';
+import availabilityRoutes from './routes/availabilityRoutes';
 
 export function createApp(): Application {
   const app = express();
@@ -20,8 +22,9 @@ export function createApp(): Application {
   app.use('/auth', authRoutes);
   app.use('/organizations', organizationRoutes);
   app.use('/users', userRoutes);
+  app.use('/resources', resourceRoutes);
   app.use('/bookings', bookingRoutes);
-
+  app.use('/availability', availabilityRoutes);
 
   app.use(notFoundHandler);
   app.use(errorHandler);

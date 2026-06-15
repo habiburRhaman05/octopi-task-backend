@@ -3,7 +3,7 @@ import { BookingService } from '../services/BookingService';
 import { ensureTenant } from '../middleware/auth';
 import { getParam } from '../utils/http';
 import { UserRole } from '../types';
-// import { AuthorizationError } from '../utils/errors';
+import { AuthorizationError } from '../utils/errors';
 import {
   CreateBookingInput,
   UpdateBookingInput,
@@ -79,7 +79,7 @@ export async function updateBooking(
     );
     res.status(200).json(booking);
   } catch (err) {
-    console.log("errir on updateing bookin");
+    // console.log("errir on updateing bookin");
     
     next(err);
   }
